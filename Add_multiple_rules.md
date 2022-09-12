@@ -1,13 +1,16 @@
 # adding_multiple_rules_with_curl
 Automating the rule creation on WANdisco Fusion (LDP) 2.15.2.1-3056
 
-## Brief
+## Brief explanation.
 You create a list of paths, then create a script to read values from it and make an API call. 
 
-## Basics
+## Basic info.
 API port: 8082 or 8084 for SSL
+
 Endpoint: /fusion/fs/deployReplicatedRule
+
 Parameters:
+```
 <deployReplicatedDirectory>
 <replicatedPathName>RULENAME</replicatedPathName>
 <mappings>
@@ -16,6 +19,7 @@ Parameters:
 </mappings>
 <preferredZone>1stFUSIONZONENAME</preferredZone>
 </deployReplicatedDirectory>
+```
 
 ## Example curl command to add a rule.
 You can use curl in numerous ways, to add a rule we can supply curl with a file containing the paramaters or we can simply have them in the executed command. See below. 
